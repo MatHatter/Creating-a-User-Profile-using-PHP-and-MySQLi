@@ -8,7 +8,10 @@
                                                               <div class="row clearfix">
 <?php
     include '_database/database.php';
-    session_start();
+	if (!isset($_SESSION)){
+	session_start();
+	}
+	
     $current_user = $_SESSION['user_username'];
     $sql = "SELECT * FROM user WHERE user_username != '$current_user' order by user_id desc";
     $result = mysqli_query($database,$sql) or die(mysqli_error($database));

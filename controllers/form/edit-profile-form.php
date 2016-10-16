@@ -1,5 +1,6 @@
 <form action="components/update-profile.php" method="post" enctype="multipart/form-data" id="UploadForm">
     <!-- Nav tabs -->
+	<div class="container">    
     <ul class="nav nav-tabs">
       <li class="active"><a href="#general" data-toggle="tab">General</a></li>
       <li><a href="#personal" data-toggle="tab">Personal</a></li>
@@ -8,9 +9,9 @@
     <div class="tab-content">
         <div class="tab-pane fade in active" id="general">         
             <div class="col-md-6">
-                <div class="form-group float-label-control">                      
-                    <label for="">First Name</label>
-                    <input type="text" class="form-control" placeholder="<?php echo $rws['user_firstname'];?>" name="user_firstname" value="<?php echo $rws['user_firstname'];?>">
+                <div class="form-group bs-float-label">                      
+                    <label for="float-input-1">First Name</label>
+                    <input id="float-input-1" type="text" class="form-control float-input" placeholder="<?php echo $rws['user_firstname'];?>" name="user_firstname" value="<?php echo $rws['user_firstname'];?>">
                 </div>
                 <div class="form-group float-label-control">  
                     <label for="">Last Name</label>
@@ -37,17 +38,10 @@
             </div>  
             <div class="col-md-6">
                 <label for="">Username</label>
+                 <input type="text" class="form-control" placeholder="<?php echo $rws['user_username'];?>" name="user_username" value="<?php echo $rws['user_username'];?>">
                 <div class="form-group float-label-control">
-                    <a href="http://<?php echo $rws['domain_websiteaddress'];?>/<?php echo $rws['user_username'];?>">        
                         <div class="input-group">
-                            <span class="input-group-addon">http://<?php echo $rws['domain_websiteaddress'];?>/</span>
-                            <fieldset disabled> 
-                                <input type="text" class="form-control" placeholder="<?php echo $rws['user_username'];?>" name="user_username" value="<?php echo $rws['user_username'];?>" id="disabledTextInput" autocomplete="off">
-                            </fieldset>  
-                        </div>
-                    </a>
-                </div>
-                <div class="form-group float-label-control">
+         
                     <label for="">Password</label>
                     <input type="password" class="form-control" placeholder="<?php echo $rws['user_password'];?>" name="user_password" value="<?php echo $rws['user_password'];?>">
                 </div>
@@ -101,7 +95,8 @@
                 </div> 
             </div>
         </div>
-    </div>     
+    </div>
+  </div>       
     <br>
     <div class="submit">
         <center>

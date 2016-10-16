@@ -7,7 +7,7 @@
               	     <div class="panel panel-default" id="sidebar">
                         <div class="panel-body">
 <?php
-    $sql = "SELECT * FROM user where user_username='$user_username'";
+    $sql = "SELECT * FROM user WHERE user_username='".$_REQUEST['user_username']."'";
     $result = mysqli_query($database,$sql) or die(mysqli_error($database)); 
     $rws = mysqli_fetch_array($result);
 ?>                

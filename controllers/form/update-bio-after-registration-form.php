@@ -18,7 +18,7 @@
         </div>
     </div>          
 <?php
-    $user_username =  $_POST['user_username'];
+    $user_username =  $_REQUEST['user_username'];
 ?>     
     <hr>                 
     <div class="submit">           
